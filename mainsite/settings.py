@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4c1wxw($svnii&h)xjq0^pmqp7dohx(gx!dnpc7_4i^3%$4^%@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -119,7 +119,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, '~/django/cats.net/mainsitestaticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'media')
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
