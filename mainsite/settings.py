@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
         '127.0.0.1',
+        'localhost',
         'cats-ex-3-2.herokuapp.com',
     ]
 
@@ -125,10 +126,11 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, '~/django/cats.net/mainsitestaticfiles')
 STATIC_URL = '/static/'
+"""
 STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'media')
 )
-
+"""
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
